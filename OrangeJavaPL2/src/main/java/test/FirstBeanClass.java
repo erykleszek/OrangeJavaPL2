@@ -2,7 +2,7 @@ package test;
 
 import org.springframework.context.annotation.Bean;
 
-@Bean
+
 public class FirstBeanClass {
    // singleton
     /*
