@@ -2,10 +2,7 @@ package com.sda.OrangeJavaPL2.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Setter
@@ -15,10 +12,15 @@ import javax.persistence.Table;
 @Table(name = "breads")
 public class Bread {
 
-    @Id
+    @Id // Required for entity
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrement id with every single object
     Long id;
     String name;
-    @Column(name = "price_in_pln")
+    @Column(name = "price_in_pln") // Change default name to custom one
     Double price;
 
+    public Bread(String name, Double price) { // Every single field included except id
+        this.name = name;
+        this.price = price;
+    }
 }
