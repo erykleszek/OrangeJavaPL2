@@ -6,9 +6,10 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum BreadType {
-    PSZENNE,
-    ZYTNIE,
-    SLODKIE,
-    WIELOZIARNISTE,
-    WYTRAWNE
+    DRY,
+    MULTIGRAIN,
+    RYE,
+    SWEET,
+    WHEAT
+
 }
