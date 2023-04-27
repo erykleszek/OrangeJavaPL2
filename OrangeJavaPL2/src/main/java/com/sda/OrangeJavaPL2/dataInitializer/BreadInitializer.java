@@ -15,8 +15,8 @@ public class BreadInitializer {
     private final BreadRepository breadRepository;
     @PostConstruct
     public void initBreads() {
-        Bread bread = new Bread("Bagietka", BreadType.PSZENNE,3.5);
-        Bread bread1 = new Bread("Grahamka",BreadType.WIELOZIARNISTE,1.0);
+        Bread bread = new Bread("Bagietka", BreadType.WHEAT,3.5);
+        Bread bread1 = new Bread("Grahamka",BreadType.MULTIGRAIN,1.0);
 
         breadRepository.addBread(bread);
         breadRepository.addBread(bread1);
